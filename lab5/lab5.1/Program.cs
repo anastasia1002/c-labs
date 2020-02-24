@@ -6,25 +6,20 @@ namespace lab5._1
     {
         static void Main(string[] args)
         {
-            Console.Write("натуральне число n=");
+            Console.Write("x=");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("n=");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.Write("дійсне число x= ");
-            double x = Convert.ToDouble(Console.ReadLine());
 
-            int sum = 0;
-            int m = 1;
-            int i = Math.Cos(double x);
+            double sum = 0;
+            double current = 1;
 
-            while (i<=Math.Pow((Math.Cos(double x),n))
+            for (int i = 1; i <= n; i++)
             {
-                sum += Math.Pow(Math.Cos(double x), m);
-                m += 1;
+                current *= Math.Cos(x);
+                sum += current;
             }
-            else
-            {
-                sum = Math.Pow(Math.Cos(double x), n);
-            }
-            Console.WriteLine("вираз=", sum);
+            Console.WriteLine("sum={0}", sum);
         }
     }
 }
