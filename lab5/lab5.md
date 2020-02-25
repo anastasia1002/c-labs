@@ -96,14 +96,14 @@ namespace lab5._3
                 k += 1;
                 q *= -1;
             }
-            Console.WriteLine("", sum, x, eps);
+            Console.WriteLine("{0},{1},{2}", sum, x, eps);
         }
     }
 }
 
 ```
 ## Task4
-__Нехай x_0=-1,x_1=5.Знайти x_i=x_i-1(1+x_i-2) де і=2,3...__
+__Нехай x_0=0,x_1=7.Знайти x_i=x_i-1(1+x_i-2) де і=2,3...__
 ```cs 
 using System;
 
@@ -118,7 +118,7 @@ namespace lab5._4
 
             int x0 = 0;
             int x1 = 7;
-            int xn = 10;
+            int xn = 0;
 
             for (int i = 0; i < n-1; i++)
             {
