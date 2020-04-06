@@ -11,6 +11,9 @@ namespace lab13._1
             TCircle tc1 = new TCircle(2);
 
             TCylinder tcy1 = new TCylinder(2, 10);
+            Console.WriteLine("num=");
+            double num = Convert.ToDouble(Console.ReadLine());
+
 
             Console.WriteLine($"S={tc1.S()}");
             Console.WriteLine($"C={tc1.C()}");

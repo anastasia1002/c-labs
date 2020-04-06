@@ -18,7 +18,7 @@ namespace lab13._1
                 r = value;
             }
         }
-        public TCircle(double R)
+        public TCircle(double r)
         {
             R = r;
         }
