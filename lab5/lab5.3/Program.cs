@@ -15,13 +15,14 @@ namespace lab5._3
             double k = 1;
             double q = 1;
 
-            while (Math.Sin(k*x)/k) > eps)
+            while (Math.Abs(Math.Sin(k)*x/k) > eps)
             {
-                sum += q * Math.Sin(k * x) / k;
+                sum += q * Math.Sin(k)*x / k;
                 k += 1;
                 q *= -1;
+
             }
-            Console.WriteLine("", sum, x, eps);
+            Console.WriteLine($"sum={sum}");
         }
     }
 }

@@ -73,7 +73,6 @@ namespace lab5._2
 ## Task3
 __Перевірити справедливість рівності при заданій точності e:x=2(sinx-sin2x/2...)__
 ```cs
-using System;
 
 namespace lab5._3
 {
@@ -90,13 +89,14 @@ namespace lab5._3
             double k = 1;
             double q = 1;
 
-            while (Math.Sin(k*x)/k) > eps)
+            while (Math.Abs(Math.Sin(k)*x/k) > eps)
             {
-                sum += q * Math.Sin(k * x) / k;
+                sum += q * Math.Sin(k )*x / k;
                 k += 1;
                 q *= -1;
+
             }
-            Console.WriteLine("{0},{1},{2}", sum, x, eps);
+            Console.WriteLine($"sum={sum}");
         }
     }
 }

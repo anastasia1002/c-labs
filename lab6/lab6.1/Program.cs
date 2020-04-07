@@ -17,13 +17,13 @@ namespace lab6._1
             for (int i = 0; i < size; i++)
             {
 
-                Console.Write("[{0}] = ", i);
+                Console.Write("i[{0}] = ", i);
                 num[i] = Convert.ToInt32(Console.ReadLine());
 
             }
 
 
-            for (int i = 0; i < size - 2; i++)
+            for (int i = 0; i < size-2 ; i++)
             {
                 num1 = num[i];
                 num2 = num[i + 1];
@@ -32,9 +32,9 @@ namespace lab6._1
                 if (num2 - num1 == num3 - num2)
                 {
                     count += 1;
-                    Console.WriteLine("[{0}] = ", num1, num2, num3, count);
+                    Console.WriteLine($"[{0}] ={count} ");
                 }
-
+              
             }
             
         }
