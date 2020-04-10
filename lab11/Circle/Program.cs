@@ -9,15 +9,15 @@ namespace Circle
             try
             {
                 TCircle c=new TCircle(2,5,4);
+                TCircle c1 = new TCircle(2, 5, 4);
 
-                Console.WriteLine("Write numer=");
-                double numer = Convert.ToDouble(Console.ReadLine());
+
                 Console.WriteLine($"S={c.S()}");
                 Console.WriteLine($"{c.Belong()}");
 
-                Console.WriteLine($"Add :{c + numer}");
-                Console.WriteLine($"Sub :{c - numer}");
-                Console.WriteLine($"Mul :{c * numer}");
+                Console.WriteLine($"Add :{c + c1}");
+                Console.WriteLine($"Sub :{c - c1}");
+                Console.WriteLine($"Mul :{c * c1}");
             }
             catch
             {

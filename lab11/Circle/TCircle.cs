@@ -70,17 +70,18 @@ namespace Circle
                 return false;
 
         }
-        public static TCircle operator +(TCircle circle,double numer)
+        public static TCircle operator +(TCircle circle,TCircle circle2)
         {
-            return new TCircle(circle.r + numer, circle.x + numer, circle.y + numer);
+            return new TCircle(circle.r + circle2.r, circle.x , circle.y );
         }
-        public static TCircle operator -(TCircle circle, double numer)
+        public static TCircle operator -(TCircle circle, TCircle circle2)
         {
-            return new TCircle(circle.r - numer, circle.x - numer, circle.y - numer);
+            return new TCircle(circle.r - circle2.r, circle.x, circle.y);
         }
-        public static TCircle operator *(TCircle circle, double numer)
+        public static TCircle operator *(TCircle circle, TCircle circle2)
         {
-            return new TCircle(circle.r * numer, circle.x * numer, circle.y * numer);
+            return new TCircle(circle.r * circle2.r, circle.x, circle.y);
         }
+
     }
 }
