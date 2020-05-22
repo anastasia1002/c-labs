@@ -8,8 +8,7 @@ namespace lab12._1
     {
         private int minutes;
         private int hours;
-        private int hv;
-        private int hod;
+        
 
         public int Minutes
         {
@@ -31,49 +30,23 @@ namespace lab12._1
                 hours = value;
             }
         }
-        public int Hv
-        {
-            get { return hv; }
-            set
-            {
-                if (value < 0 && value<60)
-                    throw new Exception("Numer must be positive");
-                hv = value;
-            }
-        }
-        public int Hod
-        {
-            get { return hod; }
-            set
-            {
-                if (value < 0)
-                    throw new Exception("Numer must be positive");
-                hod = value;
-            }
-        }
+        
 
-        public TTime(int minutes, int hours,int hv,int hod)
+        public TTime(int minutes, int hours)
         {
             Minutes = minutes;
             Hours = hours;
-            Hv = hv;
-            Hod = hod;
+            
 
         }
+        public static TTime operator +(TTime time,int num)
+        {
+            return new TTime(time.hours + num, time.minutes + num);
+        }
+        public static TTime operator -(TTime time, int num)
+        {
+            return new TTime(time.hours - num, time.minutes - num);
+        }
 
-        public int Multiply()
-        {
-            int S1 = (Hours * 60) + Minutes;
-            int S2 = (Hod * 60) + Hv;
-            int S3 = S1 + S2;
-            return S3 / 60;
-        }
-        public int Reduction()
-        {
-            int S1 = (Hours * 60) + Minutes;
-            int S2 = (Hod * 60) + Hv;
-            int S3 = S1 - S2;
-            return S3 / 60; 
-        }
     }
 }

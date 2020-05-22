@@ -6,9 +6,12 @@ namespace lab12._1
     {
         static void Main(string[] args)
         {
-            TTime t = new TTime(2, 60, 2, 50);
-            Console.WriteLine($"Add={t.Multiply()}minutes");
-            Console.WriteLine($"Sub={t.Reduction()}minutes");
+            TTime t = new TTime(3, 60);
+            Console.WriteLine("num=");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Add={t+num}");
+            Console.WriteLine($"Sub={t-num}");
+
         }
     }
 }
